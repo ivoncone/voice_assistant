@@ -1,1 +1,1 @@
-main.py
+from neuralintents import GenericAssistant

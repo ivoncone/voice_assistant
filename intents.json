@@ -1,0 +1,42 @@
+{
+	"intents": [
+		{"tag": "greetings",
+		 "patterns": [
+		 	"hello", "hey", "how is it going?", "good morning", "good day", "how are you?", "how you doing"
+		 ],
+		 "responses": [
+		 	"hello! ivonne", "hey! ivonne", "what can i do for you today ivonne?", "how may i help you ivonne"
+		 ]
+		},
+		{"tag": "create_note",
+		 "patterns": [
+		 	"new note", "reminder", "write this please", "please create note", "write this down"
+		 ],
+		 "responses": [
+		 	""
+		 ]
+		},
+		{"tag": "add_todo",
+		 "patterns": [
+		 	"show my list", "show my todo", "what is my list"
+		 ],
+		 "responses": [
+		 	""
+		 ]
+		},
+		{"tag": "exit",
+		 "patterns": [
+		 	"bye", "that be it", "i want to quit", "i have to go"
+		 ],
+		 "responses": [
+		 	""
+		 ]
+		}
+
+]}
+
+{"intents": [
+	{"tags": "",
+	"patterns": [""],
+}
+]}
