@@ -3,7 +3,7 @@ import speech_recognition
 import pyttsx3 as tts 
 import sys 
 
-Recognizer = speech_recognition.Recognizer()
+recognizer = speech_recognition.Recognizer()
 
 speaker = tts.init()
 speaker.setProperty('rate', 150)
@@ -15,7 +15,7 @@ def create_note():
 	speaker.say("what do you want to write in your note?")
 	speaker.runAndWait()
 
-	done = store_false
+	done = False
 
 	while not done:
 		try: 
@@ -73,8 +73,8 @@ def add_todo():
 
 
 def show_todos():
-	speaker.say("thw items on yout list")
-	for item in toc_list:
+	speaker.say("the items on yout list")
+	for item in todo_list:
 		speaker.say(item)
 	speaker.runAndWait()
 
@@ -83,7 +83,7 @@ def hello():
 	speaker.runAndWait()
 
 def exit():
-	speaker.say("byw ivonne")
+	speaker.say("bye ivonne")
 	speaker.runAndWait()
 	sys.exit(0)
 
@@ -100,7 +100,7 @@ asssintat.train_model()
 
 while True:
 	try: 
-		with speech_recognition.Microphone() as Mic:
+		with speech_recognition.Microphone() as mic:
 			recognizer.adjust_for_ambient_noise(mic, duration=0.2)
 			audio = recognizer.listen(mic)
 
@@ -110,5 +110,5 @@ while True:
 
 		asssintat.request(message)
 	except speech_recognition.UnknownValueError:
-		recognizer = speach_recognition.Recognizer()
+		recognizer = speech_recognition.Recognizer()
 

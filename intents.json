@@ -18,6 +18,14 @@
 		},
 		{"tag": "add_todo",
 		 "patterns": [
+		 	"add todo", "create todo", "save todo"
+		 ],
+		 "responses": [
+		 	""
+		 ]
+		},
+			{"tag": "show_todo",
+		 "patterns": [
 		 	"show my list", "show my todo", "what is my list"
 		 ],
 		 "responses": [
